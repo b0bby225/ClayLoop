@@ -65,11 +65,9 @@ Copy `dist/clayloop.fap` to `apps/Sub-GHz/clayloop.fap` on the Flipper's SD card
 
 ## Screenshots
 
-<!-- TODO: Add screenshots of each screen -->
-
 | Delay Screen | Setup Screen | Control Screen |
 |:---:|:---:|:---:|
-| *Coming soon* | *Coming soon* | *Coming soon* |
+| ![Delay Screen](screenshots/delay_screen.png) | ![Setup Screen](screenshots/setup_screen.png) | ![Control Screen](screenshots/control_screen.png) |
 
 ## File Structure
 
@@ -80,6 +78,10 @@ ClayLoop/
 ├── clayloop.png        # App icon (10x10)
 ├── images/             # Animation frames (13 PNGs)
 │   ├── frame_0.png ... frame_12.png
+├── screenshots/        # qFlipper screenshots
+│   ├── control_screen.png
+│   ├── delay_screen.png
+│   └── setup_screen.png
 ├── README.md
 ├── LICENSE
 └── .gitignore
