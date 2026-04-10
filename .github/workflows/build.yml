@@ -1,0 +1,30 @@
+name: Build and Release FAP
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install ufbt
+        run: pip install ufbt
+
+      - name: Build FAP
+        run: ufbt
+
+      - name: Upload FAP to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/clayloop.fap
